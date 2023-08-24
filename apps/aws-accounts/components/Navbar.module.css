@@ -1,0 +1,127 @@
+.btnSignOut {
+    font-size: 1.125rem;
+    padding: 5px;
+    margin-top: 0;
+    background-color: #819595;
+    border-radius: 15px;
+    border: none;
+    color:  #fff;
+    box-shadow: 2px 2px 5px #2b323c;
+}
+
+.btnSignOut:hover {
+    cursor: pointer;
+}
+
+.btnSignOut:active {
+    transform: scale(.95);
+}
+
+.mainHeader {
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 500;
+    top: 0;
+    left: 0;
+    background: #2d2c2c;
+    z-index: 10;
+    padding: 0 10px;
+    
+}
+
+.mainNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.mainNavDropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.mainNavDropDownTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+    color: white;
+}
+
+.mainNavDropDownContent {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    top: 3.5rem;
+    right: 5px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    padding: 12px 16px;
+    z-index: 1;
+    color: black;
+
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+}
+
+.mainNavDropDown:hover .mainNavDropDownContent {
+    transform: scaleY(1);
+}
+
+.mainNavDropDownTitle:hover {
+    cursor: pointer;
+}
+
+/* .downArrow {
+    transition: 1s;
+    transform: rotate(0deg);
+}
+
+.downArrow:hover {
+    transition: 1s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate (180deg);
+} */
+
+.mainNavDropDownTitleText {
+    font-size: 1.125rem;
+    padding-right: 10px;
+    color: white;
+}
+
+.mainNavDropDownText {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.125rem;
+    color: black;
+}
+
+.mainNavItems {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mainNavItem {
+    margin: 0 1rem;
+}
+
+.mainNavLink {
+    color: white;
+    font-size: 1.125rem;
+}

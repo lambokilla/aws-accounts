@@ -6,6 +6,7 @@
     border-radius: 15px;
     border: none;
     color:  #fff;
+    /* width: 100px; */
     box-shadow: 2px 2px 5px #2b323c;
 }
 
@@ -46,8 +47,8 @@
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
+    padding: 15px;
     align-items: stretch;
-    padding: 20px;
 }
 
 .flexColumn {
@@ -58,12 +59,6 @@
     justify-content: flex-end;
 }
 
-.flexStretch {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
 .flexColumnEnd {
     height: 100%;
     display: flex;
@@ -72,8 +67,19 @@
     justify-content: flex-end;
 }
 
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.input {
+    height: 20px;
+    margin-bottom: 6px;
+}
+
 .label {
-    padding-right: 10px;
+    margin-bottom: 6px;
+    font-size: 1.125rem;
 }
 
 .selector {

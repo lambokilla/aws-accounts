@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@aws-accounts/backend": ["libs/backend/src/index.ts"],
+      "@aws-accounts/client": ["libs/client/src/index.ts"],
+      "@aws-accounts/common": ["libs/common/src/index.ts"],
+      "@aws-accounts/functions": ["libs/functions/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

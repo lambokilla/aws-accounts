@@ -72,8 +72,14 @@
     justify-content: flex-end;
 }
 
+.input {
+    height: 20px;
+    margin-bottom: 6px;
+}
+
 .label {
-    padding-right: 10px;
+    margin-bottom: 6px;
+    font-size: 1.125rem;
 }
 
 .selector {

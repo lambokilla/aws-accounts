@@ -6,6 +6,7 @@
     border-radius: 15px;
     border: none;
     color:  #fff;
+    /* width: 100px; */
     box-shadow: 2px 2px 5px #2b323c;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,7 +36,7 @@
 }
 
 .box {
-    height: calc(100% - 80px);
+    height: calc(100%);
     width: calc(100% - 40px);
     background-color: #f4f4f4;
     display: flex;
@@ -43,46 +44,61 @@
     align-items: center;
     color: #2d2c2c;
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 80px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
+    padding: 15px;
     align-items: stretch;
-    padding: 20px;
 }
 
 .flexColumn {
     /* padding: 0 10px; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     align-items: stretch;
     justify-content: flex-end;
-}
-
-.flexStretch {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 
 .flexColumnEnd {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     align-items: stretch;
     justify-content: flex-end;
+    align-items: stretch;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.input {
+    height: 20px;
+    margin-bottom: 6px;
 }
 
 .label {
-    padding-right: 10px;
+    margin-bottom: 6px;
+    font-size: 1.125rem;
 }
 
 .selector {
     width: 100px;
 }
 
-@media (min-height: 400px) {
+@media (min-height: 540px) {
+
+    .container {
+        height: 100vh;
+    }
+}
+
+@media (min-height: 750px) {
     .box {
-        height: 400px;
+        height: 600px;
         margin-top: 0;
     }
 }

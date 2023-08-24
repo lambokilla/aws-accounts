@@ -1,0 +1,67 @@
+{
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "cdk",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "cdk",
+                "command": "echo 'no build needed, just ts-node'"
+            }
+        },
+        "deploy": {
+            "dependsOn": [
+                {
+                    "target": "build",
+                    "projects": "dependencies"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "cdk",
+                "command": "npx cdk deploy && ../scripts/apply-config.sh && cat ../.env.cdk"
+            }
+        },
+        "bootstrap": {
+            "dependsOn": [
+                {
+                    "target": "build",
+                    "projects": "dependencies"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "cdk",
+                "command": "npx cdk bootstrap"
+            }
+        },
+        "diff": {
+            "dependsOn": [
+                {
+                    "target": "build",
+                    "projects": "dependencies"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "cdk",
+                "command": "npx cdk diff"
+            }
+        },
+        "destroy": {
+            "dependsOn": [
+                {
+                    "target": "build",
+                    "projects": "dependencies"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "cdk",
+                "command": "npx cdk destroy"
+            }
+        }
+    },
+    "tags": []
+}
